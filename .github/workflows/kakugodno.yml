@@ -19,8 +19,8 @@ jobs:
 
       - name: Build, tag, and push image to Yandex Cloud Container Registry
         env:
-          CR_REGISTRY: aaaaaaaaa
-          CR_REPOSITORY: my-cr-repo
+          CR_REGISTRY: crpteiouh20lhejv89vh
+          CR_REPOSITORY: default
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
